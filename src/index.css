@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+
+  --color-bg-deep: #0A0A0A;
+  --color-primary: #FFFFFF;
+  --color-accent: #2563EB;
+  --color-grid: #1F1F1F;
+
+  --breakpoint-xs: 480px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-primary font-space antialiased overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-archivo uppercase;
+  }
+}
+
+@layer utilities {
+  .grain-effect {
+    position: relative;
+  }
+
+  .grain-effect::before {
+    content: "";
+    position: fixed;
+    top: -150%;
+    left: -150%;
+    width: 300%;
+    height: 300%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 50;
+    filter: brightness(100%) contrast(100%);
+    animation: grain 8s steps(10) infinite;
+  }
+
+  @keyframes grain {
+
+    0%,
+    100% {
+      transform: translate(0, 0)
+    }
+
+    10% {
+      transform: translate(-5%, -10%)
+    }
+
+    20% {
+      transform: translate(-15%, 5%)
+    }
+
+    30% {
+      transform: translate(7%, -25%)
+    }
+
+    40% {
+      transform: translate(-5%, 25%)
+    }
+
+    50% {
+      transform: translate(-15%, 10%)
+    }
+
+    60% {
+      transform: translate(15%, 0%)
+    }
+
+    70% {
+      transform: translate(0%, 15%)
+    }
+
+    80% {
+      transform: translate(3%, 35%)
+    }
+
+    90% {
+      transform: translate(-10%, 10%)
+    }
+  }
+
+  .grid-background {
+    background-size: 100px 100px;
+    background-image:
+      linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+    background-position: center center;
+  }
+
+  .technical-line {
+    @apply absolute bg-grid;
+  }
+
+  .technical-line-v {
+    @apply w-px h-full;
+  }
+
+  .technical-line-h {
+    @apply h-px w-full;
+  }
+}
