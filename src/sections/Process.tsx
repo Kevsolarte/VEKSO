@@ -61,7 +61,7 @@ const Process: React.FC = () => {
                 <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-grid opacity-30 -translate-x-1/2" />
                 <motion.div
                     className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-[2px] bg-accent -translate-x-1/2 origin-top"
-                    style={{ scaleY }}
+                    style={{ scaleY, translateZ: 0, willChange: 'transform' }}
                 />
 
                 <div className="flex flex-col gap-24 md:gap-40">

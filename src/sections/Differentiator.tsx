@@ -84,6 +84,7 @@ const Differentiator: React.FC = () => {
                             transition={{ duration: 0.8, delay: idx * 0.1 }}
                             viewport={{ once: true }}
                             className="bg-bg-deep p-8 md:p-12 relative group hover:bg-white/[0.02] transition-all duration-500 overflow-hidden"
+                            style={{ transform: 'translateZ(0)' }}
                         >
                             <div className="relative z-10 flex flex-col h-full">
                                 <span className="text-[10px] font-mono tracking-widest text-accent mb-8 block">
@@ -149,6 +150,7 @@ const Differentiator: React.FC = () => {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as any }}
                                         className="overflow-hidden"
+                                        style={{ willChange: 'height, opacity' }}
                                     >
                                         <div className="pb-8 pl-12 md:pl-16">
                                             <p className="font-space text-base md:text-lg opacity-60 leading-relaxed italic border-l-2 border-accent/20 pl-6">

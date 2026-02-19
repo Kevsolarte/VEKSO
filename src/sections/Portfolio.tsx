@@ -7,15 +7,15 @@ const projects = [
         title: "FLASHPOINT: Visual Authority",
         category: "Creative / Portfolio / UX",
         desktopImage: "/Portafolio/FlashPoint/Captura%20de%20pantalla%202026-02-18%20225016.png",
-        mobileImage: "/Portafolio/FlashPoint/flashpoint movil.png",
+        mobileImage: "/Portafolio/FlashPoint/flashpoint movil cortado.png",
         description: "Transformamos la presencia digital del fotógrafo Juan Flashpoint. De una dependencia total de Instagram a una plataforma de autoridad visual propia. Incremento del 60% en captación de clientes premium."
     },
     {
         id: "02",
         title: "CAUTIVA: Hybrid Sales Ecosystem",
         category: "Ecommerce / Hybrid / UX",
-        desktopImage: "/Portafolio/Cautiva/Captura%20de%20pantalla%202026-02-18%20234551.png",
-        mobileImage: "/Portafolio/Cautiva/cautiva movil.png",
+        desktopImage: "/Portafolio/Cautiva/Captura de pantalla 2026-02-18 234519.png",
+        mobileImage: "/Portafolio/Cautiva/cautiva movil cortado.png",
         description: "Rediseñamos la operativa de Cautiva Shopping, integrando un catálogo dinámico con cierre directo en WhatsApp. Pedidos estructurados y reducción de fricción operativa en un 40%."
     },
     {
@@ -64,6 +64,7 @@ const Portfolio: React.FC = () => {
                                 whileInView={{ scale: 1, opacity: 0.6 }}
                                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                                 className="absolute inset-0 w-full h-full"
+                                style={{ transform: 'translateZ(0)' }}
                             >
                                 <img
                                     src={isMobile ? project.mobileImage : project.desktopImage}
@@ -73,7 +74,10 @@ const Portfolio: React.FC = () => {
                             </motion.div>
 
                             {/* Main Info */}
-                            <div className="relative z-20 w-[80%] max-w-6xl flex flex-col md:flex-row items-end justify-between gap-12">
+                            <div
+                                className="relative z-20 w-[80%] max-w-6xl flex flex-col md:flex-row items-end justify-between gap-12"
+                                style={{ transform: 'translateZ(0)' }}
+                            >
                                 {/* Left Side: Case # */}
                                 <div className="absolute top-0 left-0 -translate-y-full mb-8 flex flex-col items-start gap-4">
                                     <span className="text-accent font-mono text-xs tracking-widest">#CASE_{project.id}</span>

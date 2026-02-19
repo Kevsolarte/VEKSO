@@ -50,6 +50,7 @@ const Problem: React.FC = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 className="relative z-10"
+                style={{ transform: 'translateZ(0)', willChange: 'opacity, transform' }}
             >
                 {/* Section Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">

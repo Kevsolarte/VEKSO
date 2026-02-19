@@ -127,8 +127,9 @@ const Services: React.FC = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }}
+                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as any }}
                         className="min-h-[500px]"
+                        style={{ willChange: 'opacity, transform' }}
                     >
                         {selectedService?.isCustom ? (
                             <div className="max-w-4xl grid md:grid-cols-2 gap-12">
