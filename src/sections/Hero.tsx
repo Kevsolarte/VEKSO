@@ -69,28 +69,7 @@ const Hero: React.FC = () => {
                 <motion.div variants={lineVariantsV} initial="hidden" animate="visible" className="w-px h-full bg-grid opacity-20" />
             </div>
 
-            {/* Header Info (Reveal after 0.3s) */}
-            <div className="absolute top-8 left-[10%] right-[10%] flex justify-between items-start z-20">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.4 }}
-                    transition={{ delay: 0.3 }}
-                    className="text-[10px] font-mono tracking-widest leading-tight"
-                >
-                    VEKSO.LABS<br />
-                    v.0.4.2
-                </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                    className="flex flex-col items-end gap-1 group cursor-pointer"
-                >
-                    <div className="w-8 h-px bg-white group-hover:bg-accent transition-colors" />
-                    <div className="w-5 h-px bg-white group-hover:bg-accent transition-colors" />
-                </motion.div>
-            </div>
 
             {/* Main Content */}
             <motion.div
@@ -135,7 +114,7 @@ const Hero: React.FC = () => {
                     variants={technicalVariants}
                     className="mt-2 text-[10px] items-end font-mono tracking-widest opacity-30 select-none ml-auto"
                 >
-                    AGENCY / STUDIO
+                    AGENCIA WEB
                 </motion.div>
             </motion.div>
 

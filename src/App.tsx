@@ -1,4 +1,5 @@
 import './App.css'
+import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 import Problem from './sections/Problem'
 import Services from './sections/Services'
@@ -9,15 +10,18 @@ import CTA from './sections/CTA'
 
 function App() {
   return (
-    <main className="app-container">
-      <Hero />
-      <Problem />
-      <Services />
-      <Portfolio />
-      <Process />
-      <Differentiator />
-      <CTA />
-    </main>
+    <>
+      <Navbar />
+      <main className="app-container">
+        <Hero />
+        <Problem />
+        <Services />
+        <Portfolio />
+        <Process />
+        <Differentiator />
+        <CTA />
+      </main>
+    </>
   )
 }
 

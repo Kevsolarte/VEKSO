@@ -1,10 +1,10 @@
 import React from 'react';
 
 const socialLinks = [
-    { label: 'INSTAGRAM', url: 'https://instagram.com/vekso.labs', icon: 'IG' },
-    { label: 'TIKTOK', url: 'https://tiktok.com/@vekso.labs', icon: 'TT' },
-    { label: 'LINKEDIN', url: 'https://linkedin.com/company/vekso', icon: 'LN' },
-    { label: 'WHATSAPP', url: 'https://wa.me/yournumber', icon: 'WA' }
+    { label: 'INSTAGRAM', url: 'https://www.instagram.com/v3ks0?igsh=ZXUyd3NqazlhMG9v&utm_source=qr', icon: 'IG' },
+    { label: 'TIKTOK', url: 'https://www.tiktok.com/@sonus.dev0?_r=1&_t=ZS-94HcGG8Zt7U', icon: 'TT' },
+    { label: 'LINKEDIN', url: 'https://linkedin.com/in/TU_PERFIL', icon: 'LN' },
+    { label: 'WHATSAPP', url: `https://wa.me/584246777164?text=${encodeURIComponent('Hola VEKSO, me gustaría recibir más información sobre sus servicios estratégicos.')}`, icon: 'WA' }
 ];
 
 const CTA: React.FC = () => {

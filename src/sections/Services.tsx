@@ -77,6 +77,10 @@ const servicesList: Service[] = [
     }
 ];
 
+const getWhatsAppLink = (message: string) => {
+    return `https://wa.me/584246777164?text=${encodeURIComponent(message)}`;
+};
+
 const Services: React.FC = () => {
     const [activeService, setActiveService] = useState<string>("landings");
 
@@ -141,9 +145,14 @@ const Services: React.FC = () => {
                                         {selectedService.description}
                                     </p>
                                     <div className="flex gap-4">
-                                        <button className="px-10 py-5 bg-white text-bg-deep font-archivo text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-500">
+                                        <a
+                                            href={getWhatsAppLink(`Hola VEKSO, me interesa analizar un proyecto de ${selectedService.title}.`)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-10 py-5 bg-white text-bg-deep font-archivo text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-500 no-underline"
+                                        >
                                             Analizar Proyecto
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="border border-grid/50 p-8 md:p-12 flex flex-col justify-center bg-white/[0.01]">
@@ -190,9 +199,14 @@ const Services: React.FC = () => {
                                             ))}
                                         </ul>
 
-                                        <button className="w-full py-5 border border-white/10 text-white font-archivo text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-bg-deep transition-all duration-500">
+                                        <a
+                                            href={getWhatsAppLink(`Hola VEKSO, me gustaría solicitar el plan ${tier.name} de ${selectedService.title}.`)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-full py-5 border border-white/10 text-white font-archivo text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-bg-deep transition-all duration-500 text-center no-underline"
+                                        >
                                             Solicitar Plan
-                                        </button>
+                                        </a>
 
                                         {/* Bottom accent */}
                                         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-accent/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center" />

@@ -1,10 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @theme {
   --font-archivo: "Archivo Black", sans-serif;

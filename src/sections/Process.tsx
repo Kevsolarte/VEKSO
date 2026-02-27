@@ -4,31 +4,31 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 const steps = [
     {
         id: "01",
-        title: "DIAGNÓSTICO ESTRATÉGICO",
-        tag: "SYSTEM_SCAN",
-        description: "Analizamos tu modelo de negocio, identificamos fugas de conversión y definimos el stack tecnológico óptimo para tu mercado objetivo.",
-        meta: "EST_TIME: 3-5 DAYS"
+        title: "ANÁLISIS DE MODELO",
+        tag: "BUSINESS_DISCOVERY",
+        description: "Nos sumergimos en tu modelo de negocio para entender cómo operas realmente. Identificamos tus canales de venta actuales y dónde están las fricciones que detienen tu crecimiento.",
+        meta: "GOAL: UNDERSTAND_FLOW"
     },
     {
         id: "02",
-        title: "ARQUITECTURA DIGITAL",
-        tag: "LOGIC_DESIGN",
-        description: "Diseñamos la experiencia de usuario (UX) centrada en la conversión, definiendo flujos de pago, catálogos híbridos o integraciones de software.",
-        meta: "STATUS: BLUEPRINTING"
+        title: "ESTRATEGIA & SUGERENCIAS",
+        tag: "STRATEGIC_PLAN",
+        description: "Con el panorama claro, te presentamos una hoja de ruta con sugerencias directas. No solo construimos, te decimos qué piezas de software realmente necesitas para escalar.",
+        meta: "PHASE: SUGGESTIONS"
     },
     {
         id: "03",
-        title: "DESARROLLO DE ALTO NIVEL",
-        tag: "CORE_BUILD",
-        description: "Programamos con React / Next.js bajo estándares de código premium. Animaciones fluidas, carga ultrarrápida y optimización SEO nativa.",
-        meta: "COMPILING... 100%"
+        title: "VALIDACIÓN DE IDEA",
+        tag: "CONCEPT_PROOF",
+        description: "Antes de escribir una sola línea de código, validamos que la solución propuesta encaje con tu mercado. Aseguramos que el desarrollo tenga un retorno de inversión claro.",
+        meta: "STATUS: VALIDATING"
     },
     {
         id: "04",
-        title: "DESPLIEGUE Y ESCALADO",
+        title: "DESARROLLO DE ALTO NIVEL",
         tag: "SYSTEM_GO_LIVE",
-        description: "Lanzamiento en servidores de alta disponibilidad y configuración de herramientas de análisis para medir el retorno de inversión (ROI).",
-        meta: "READY_FOR_DEPLOY"
+        description: "Ejecutamos la visión final bajo estándares premium. Transformamos la estrategia validada en una herramienta digital robusta que trabaja para tu negocio 24/7.",
+        meta: "FINAL_STAGE: EXECUTION"
     }
 ];
 

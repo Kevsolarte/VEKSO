@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 const projects = [
     {
         id: "01",
-        title: "FLASHPOINT: Visual Authority",
-        category: "Creative / Portfolio / UX",
+        title: "FLASHPOINT: Authority Growth",
+        category: "Visual Brand / Portfolio / UX",
         desktopImage: "/Portafolio/FlashPoint/Captura%20de%20pantalla%202026-02-18%20225016.png",
         mobileImage: "/Portafolio/FlashPoint/flashpoint movil cortado.png",
-        description: "Transformamos la presencia digital del fotógrafo Juan Flashpoint. De una dependencia total de Instagram a una plataforma de autoridad visual propia. Incremento del 60% en captación de clientes premium."
+        liveLink: "https://your-link-here.com",
+        description: "De una dependencia total de Instagram a una plataforma de autoridad propia para Jhostin. Centralizamos su arte bajo un diseño exclusivo que proyecta profesionalismo real. Resultado: +60% en consultas mensuales y reservas automatizadas."
     },
     {
         id: "02",
@@ -16,24 +17,27 @@ const projects = [
         category: "Ecommerce / Hybrid / UX",
         desktopImage: "/Portafolio/Cautiva/Captura de pantalla 2026-02-18 234519.png",
         mobileImage: "/Portafolio/Cautiva/cautiva movil cortado.png",
+        liveLink: "https://your-link-here.com",
         description: "Rediseñamos la operativa de Cautiva Shopping, integrando un catálogo dinámico con cierre directo en WhatsApp. Pedidos estructurados y reducción de fricción operativa en un 40%."
     },
     {
         id: "03",
-        title: "SOFTPOS: Operational Intelligence",
+        title: "SONUSPOS: Operational Intelligence",
         category: "Software / POS / Logic",
-        desktopImage: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop",
-        mobileImage: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop",
+        desktopImage: "/src/assets/sonuspos%20desktop.png",
+        mobileImage: "/src/assets/sonuspos%20movil.png",
+        liveLink: "https://your-link-here.com",
         description: "Digitalización integral de inventarios y ventas. Un sistema a medida que eliminó el error humano y centralizó la operativa en tiempo real."
     }
 ];
 
 const Portfolio: React.FC = () => {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(() =>
+        typeof window !== 'undefined' ? window.innerWidth < 768 : false
+    );
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
-        checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
@@ -61,7 +65,7 @@ const Portfolio: React.FC = () => {
 
                             <motion.div
                                 initial={{ scale: 1.1, opacity: 0 }}
-                                whileInView={{ scale: 1, opacity: 0.6 }}
+                                whileInView={{ scale: 1, opacity: isMobile ? 1 : 0.6 }}
                                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                                 className="absolute inset-0 w-full h-full"
                                 style={{ transform: 'translateZ(0)' }}
@@ -69,7 +73,7 @@ const Portfolio: React.FC = () => {
                                 <img
                                     src={isMobile ? project.mobileImage : project.desktopImage}
                                     alt={project.title}
-                                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ${isMobile ? 'object-center' : 'object-top'}`}
+                                    className={`w-full h-full object-cover transition-all duration-1000 grayscale-0 md:grayscale md:group-hover:grayscale-0 ${isMobile ? 'object-center' : 'object-top'}`}
                                 />
                             </motion.div>
 
@@ -111,12 +115,17 @@ const Portfolio: React.FC = () => {
                                         <span className="text-[10px] font-mono tracking-widest opacity-40 uppercase block mb-1">Category</span>
                                         <span className="text-sm font-archivo tracking-wider text-white">{project.category}</span>
                                     </div>
-                                    <button className="group/btn flex items-center gap-4">
-                                        <span className="text-xs font-mono uppercase tracking-[0.3em] group-hover/btn:text-accent transition-colors">View Details</span>
+                                    <a
+                                        href={project.liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group/btn flex items-center gap-4 no-underline"
+                                    >
+                                        <span className="text-xs font-mono uppercase tracking-[0.3em] group-hover/btn:text-accent transition-colors">View Project</span>
                                         <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center group-hover/btn:border-accent group-hover/btn:bg-accent transition-all duration-500">
-                                            <span className="text-lg group-hover/btn:translate-x-1 transition-transform">{">"}</span>
+                                            <span className="text-lg group-hover/btn:translate-x-1 transition-transform text-white">{">"}</span>
                                         </div>
-                                    </button>
+                                    </a>
                                 </motion.div>
                             </div>
 

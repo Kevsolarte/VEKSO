@@ -3,55 +3,55 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
     {
-        question: "¿POR QUÉ EL PRECIO ES SUPERIOR AL DE UN FREELANCE?",
-        answer: "No estás pagando por 'una web', estás invirtiendo en ingeniería. Un freelance suele usar templates que mueren en 6 meses. VEKSO construye activos digitales de alto rendimiento con código a medida que escala con tu negocio y no requiere rediseños constantes."
+        question: "¿CÓMO ASEGURAN EL RETORNO DE MI INVERSIÓN?",
+        answer: "No construimos webs aisladas, creamos ecosistemas de conversión. Antes de programar, validamos tu modelo de negocio y diseñamos cada flujo para maximizar la captación de clientes. Tu sitio es una herramienta de ventas que trabaja 24/7."
     },
     {
-        question: "¿CUÁNDO ESTARÁ LISTA MI SOLUCIÓN?",
-        answer: "Depende de la complejidad técnica. Una Landing Page estratégica toma 10-15 días, mientras que un software a medida (POS/Ecommerce) puede tomar 4-8 semanas. Priorizamos la calidad del código y la optimización sobre las entregas apresuradas."
+        question: "¿MI NEGOCIO PODRÁ ESCALAR CON ESTA SOLUCIÓN?",
+        answer: "Absolutamente. Desarrollamos con arquitectura de alto nivel que permite que tu plataforma crezca a medida que tu negocio se expande, sin necesidad de empezar de cero ni pagar rediseños costosos en el futuro."
     },
     {
-        question: "¿QUIÉN ES DUEÑO DEL CÓDIGO FINAL?",
-        answer: "Tú. A diferencia de agencias que te 'alquilan' el sitio o usan plataformas cerradas, VEKSO te entrega la propiedad total. Sin cuotas ocultas ni secuestro de datos. Tu activo digital es 100% independiente."
+        question: "¿QUÉ TAN RÁPIDO VERÉ RESULTADOS?",
+        answer: "Nuestras soluciones están optimizadas para la autoridad inmediata. Desde el lanzamiento, tu marca proyectará un profesionalismo premium que acorta el ciclo de decisión de tus clientes y aumenta la confianza de compra."
     },
     {
-        question: "¿HACEN MANTENIMIENTO POST-LANZAMIENTO?",
-        answer: "Sí. Ofrecemos protocolos de soporte y optimización continua para asegurar que tu sistema siempre esté al 100% de su capacidad técnica y seguridad."
+        question: "¿TENDRÉ CONTROL TOTAL SOBRE MI PLATAFORMA?",
+        answer: "Sí. Te entregamos un activo digital 100% propio. Tendrás autonomía total para gestionar tu contenido y ventas, con el respaldo de un sistema robusto, seguro y diseñado para la independencia operativa."
     }
 ];
 
 const differentiators = [
     {
         id: "P01",
-        title: "CÓDIGO PURO VS TEMPLATES",
-        tag: "CORE_PERFORMANCE",
-        description: "No usamos constructores pesados. Escribimos código limpio en React que carga en milisegundos y escala sin límites técnicos.",
+        title: "DISEÑO PARA LA CONVERSIÓN",
+        tag: "CONVERSION_MAXIMIZER",
+        description: "No diseñamos para que se vea 'bonito', diseñamos para que se venda. Cada animación y estructura está pensada para guiar al usuario hacia la reserva o compra.",
         specs: [
-            { label: "Lighthouse Score", value: "98/100" },
-            { label: "Architecture", value: "Clean Code" },
-            { label: "Scalability", value: "Extreme" }
+            { label: "User Retention", value: "+85% Avg" },
+            { label: "Sales Focus", value: "High Intent" },
+            { label: "Engagement", value: "Vibrant" }
         ]
     },
     {
         id: "P02",
-        title: "LÓGICA DE NEGOCIO",
-        tag: "STRATEGIC_CONVERSION",
-        description: "Cada botón y flujo tiene un objetivo financiero. No diseñamos 'páginas bonitas', construimos activos rentables.",
+        title: "INTELIGENCIA DE NEGOCIO",
+        tag: "STRATEGIC_LOGIC",
+        description: "Integramos soluciones que optimizan tu operativa. Desde catálogos híbridos hasta flujos automatizados que liberan tu tiempo y aumentan tu rentabilidad.",
         specs: [
-            { label: "Focus", value: "ROI Driven" },
-            { label: "UX Flow", value: "High Intent" },
-            { label: "Logic", value: "Business First" }
+            { label: "Efficiency", value: "Automated" },
+            { label: "Process", value: "Optimized" },
+            { label: "ROI Potential", value: "Exponential" }
         ]
     },
     {
         id: "P03",
-        title: "PROPIEDAD TOTAL",
-        tag: "DIGITAL_OWNERSHIP",
-        description: "Tu web es tuya, no un alquiler de plataforma. Código 100% propio sin dependencias de constructores externos.",
+        title: "ACTIVOS DIGITALES PROPIOS",
+        tag: "BUSINESS_ASSETS",
+        description: "Tu web no es un gasto, es un activo que crece en valor. Te entregamos la propiedad total de una herramienta que trabaja para ti 24/7 sin depender de terceros.",
         specs: [
-            { label: "License", value: "100% Yours" },
-            { label: "Lock-in", value: "Zero" },
-            { label: "Portability", value: "Native" }
+            { label: "Ownership", value: "100% Secure" },
+            { label: "Stability", value: "Enterprise" },
+            { label: "Future-Proof", value: "Guaranteed" }
         ]
     }
 ];
@@ -70,7 +70,7 @@ const Differentiator: React.FC = () => {
                         [ 05 // COMPETITIVE_EDGE ]
                     </span>
                     <h2 className="text-4xl md:text-7xl font-archivo leading-none tracking-tighter max-w-4xl">
-                        EL ADN TÉCNICO <br />QUE NOS <span className="text-white/40 italic">SEPARA</span>
+                        EL ENFOQUE <br />QUE GENERA <span className="text-white/40 italic">RESULTADOS</span>
                     </h2>
                 </div>
 
