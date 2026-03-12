@@ -12,7 +12,16 @@ const projects = [
         description: "De una dependencia total de Instagram a una plataforma de autoridad propia para Jhostin. Centralizamos su arte bajo un diseño exclusivo que proyecta profesionalismo real. Resultado: +60% en consultas mensuales y reservas automatizadas."
     },
     {
-        id: "02",
+        id: "05",
+        title: "TOPLEVEL: Booking Flow",
+        category: "Barbershop / Booking / UX",
+        desktopImage: "/Portafolio/TopLevel/topleveldesktop.png",
+        mobileImage: "/Portafolio/TopLevel/toplevel movil.png",
+        liveLink: "https://your-link-here.com",
+        description: "Transformamos la presencia digital de la barbería Toplevel con un sitio web de 5 páginas diseñado para proyectar marca y resolver su mayor fricción operativa: la gestión de citas. Centralizamos las reservas en una agenda clara y funcional, permitiéndoles saber con anticipación qué clientes tendrán, organizar mejor su jornada y elevar la experiencia del servicio."
+    },
+    {
+        id: "03",
         title: "CAUTIVA: Hybrid Sales Ecosystem",
         category: "Ecommerce / Hybrid / UX",
         desktopImage: "/Portafolio/Cautiva/Captura de pantalla 2026-02-18 234519.png",
@@ -21,14 +30,23 @@ const projects = [
         description: "Rediseñamos la operativa de Cautiva Shopping, integrando un catálogo dinámico con cierre directo en WhatsApp. Pedidos estructurados y reducción de fricción operativa en un 40%."
     },
     {
-        id: "03",
+        id: "04",
         title: "SONUSPOS: Operational Intelligence",
         category: "Software / POS / Logic",
-        desktopImage: "/src/assets/sonuspos%20desktop.png",
-        mobileImage: "/src/assets/sonuspos%20movil.png",
+        desktopImage: "/Portafolio/sonuspos/sonuspos desktop.png",
+        mobileImage: "/Portafolio/sonuspos/sonuspos movil.png",
         liveLink: "https://your-link-here.com",
         description: "Digitalización integral de inventarios y ventas. Un sistema a medida que eliminó el error humano y centralizó la operativa en tiempo real."
-    }
+    },
+    {
+    id: "06",
+    title: "SHINE BY VENUS: Booking Flow",
+    category: "Beauty / Landing Page / UX",
+    desktopImage: "/Portafolio/Shinebyvenus/shinebyvenusdesktop.png",
+    mobileImage: "/Portafolio/Shinebyvenus/image.png",
+    liveLink: "https://your-link-here.com",
+    description: "Transformamos la presencia digital del negocio con una landing page diseñada para proyectar estética, confianza y conversión. Más allá de lo visual, la solución resolvió una fricción clave: la organización de citas. Centralizamos las reservas en una experiencia simple y atractiva, permitiéndoles saber con anticipación qué clientas atenderán y gestionar mejor su jornada."
+}
 ];
 
 const Portfolio: React.FC = () => {
