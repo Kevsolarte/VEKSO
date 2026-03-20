@@ -54,14 +54,13 @@ const Hero: React.FC = () => {
             transition: {
                 duration: 1.5,
                 ease: [0.16, 1, 0.3, 1] as any,
-                delay: 0 // Grid first
+                delay: 0
             }
         }
     };
 
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden grain-effect bg-bg-deep">
-            {/* Vertical Grid Lines - Optimization: only render 2 on mobile */}
             <div className="absolute inset-0 flex justify-between pointer-events-none px-[10%]">
                 <motion.div variants={lineVariantsV} initial="hidden" animate="visible" className="w-px h-full bg-grid opacity-20" />
                 {!isMobile && <motion.div variants={lineVariantsV} initial="hidden" animate="visible" className="w-px h-full bg-grid opacity-20" />}
@@ -97,9 +96,9 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.5, rotate: isMobile ? 0 : -720 }}
                             animate={{ opacity: 1, scale: 1, rotate: 0 }}
                             transition={{
-                                delay: 2.6, // Reveal the symbol even later
+                                delay: 2.6, 
                                 duration: isMobile ? 1 : 1.5,
-                                type: isMobile ? "tween" : "spring", // Tween is lighter than Spring
+                                type: isMobile ? "tween" : "spring", 
                                 stiffness: 60,
                                 damping: 15
                             }}

@@ -69,7 +69,6 @@ const Process: React.FC = () => {
                         <div key={step.id} className={`relative flex flex-col md:flex-row items-center gap-12 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                             <div className="absolute left-[20px] md:left-1/2 top-10 w-4 h-4 bg-bg-deep border-2 border-accent -translate-x-1/2 z-10" />
 
-                            {/* Info Block */}
                             <motion.div
                                 initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -94,7 +93,6 @@ const Process: React.FC = () => {
                                 </div>
                             </motion.div>
 
-                            {/* Decorative Technical Detail (Right/Left side) */}
                             <div className="hidden md:block w-[45%] pointer-events-none">
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.8 }}

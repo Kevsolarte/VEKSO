@@ -29,14 +29,12 @@ const Navbar: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // Close on ESC
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setIsOpen(false); };
         window.addEventListener('keydown', handleKey);
         return () => window.removeEventListener('keydown', handleKey);
     }, []);
 
-    // Lock/unlock body scroll
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : '';
         return () => { document.body.style.overflow = ''; };
@@ -83,9 +81,7 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            {/* Fixed Navbar Bar */}
             <div className="fixed top-0 left-0 right-0 z-50 px-[10%] py-6 flex justify-between items-center pointer-events-none">
-                {/* Logo */}
                 <motion.a
                     href="#hero"
                     initial={{ opacity: 0 }}
@@ -125,7 +121,6 @@ const Navbar: React.FC = () => {
                 </motion.button>
             </div>
 
-            {/* Full-Screen Overlay */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -136,10 +131,8 @@ const Navbar: React.FC = () => {
                         className="fixed inset-0 z-40 bg-bg-deep flex flex-col overflow-hidden"
                         style={{ willChange: 'opacity', transform: 'translateZ(0)' }}
                     >
-                        {/* Grid Background */}
                         <div className="absolute inset-0 grid-background opacity-10 pointer-events-none" />
 
-                        {/* Animated vertical accent line */}
                         <motion.div
                             initial={{ scaleY: 0 }}
                             animate={{ scaleY: 1 }}
@@ -148,7 +141,6 @@ const Navbar: React.FC = () => {
                             className="absolute left-[10%] top-0 bottom-0 w-px bg-accent/20 origin-top"
                         />
 
-                        {/* Status bar top */}
                         <motion.div
                             variants={metaVariants}
                             initial="hidden"
@@ -160,7 +152,6 @@ const Navbar: React.FC = () => {
                             <span className="text-[9px] font-mono tracking-[0.3em] opacity-30 text-accent">{time}</span>
                         </motion.div>
 
-                        {/* Main Nav Links */}
                         <div className="flex-1 flex flex-col justify-center px-[10%] gap-2 mt-16">
                             {navLinks.map((link, i) => (
                                 <div key={link.id} className="overflow-hidden border-b border-grid/20">
@@ -224,7 +215,6 @@ const Navbar: React.FC = () => {
                             </div>
                         </motion.div>
 
-                        {/* Corner decorative tag */}
                         <div className="absolute bottom-4 right-[10%] text-[8px] font-mono opacity-10 tracking-widest uppercase">
                             VEKSO_NAV_V1
                         </div>

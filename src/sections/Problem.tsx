@@ -68,7 +68,6 @@ const Problem: React.FC = () => {
                     </motion.p>
                 </div>
 
-                {/* Problem Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-grid/30 border border-grid/30">
                     {problems.map((prob) => (
                         <motion.div

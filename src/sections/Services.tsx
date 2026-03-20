@@ -101,7 +101,6 @@ const Services: React.FC = () => {
                     </h2>
                 </div>
 
-                {/* Main Service Selector */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-grid/30 border border-grid/30 mb-16">
                     {servicesList.map((service) => (
                         <button
@@ -208,7 +207,6 @@ const Services: React.FC = () => {
                                             Solicitar Plan
                                         </a>
 
-                                        {/* Bottom accent */}
                                         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-accent/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center" />
                                     </div>
                                 ))}

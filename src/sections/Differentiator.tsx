@@ -119,7 +119,6 @@ const Differentiator: React.FC = () => {
                     ))}
                 </div>
 
-                {/* FAQ Section: QUERY_RESOLUTION_SYSTEM */}
                 <div className="max-w-4xl mx-auto space-y-4 mb-32">
                     <div className="mb-12">
                         <span className="text-accent font-mono text-[10px] tracking-[0.4em] block mb-2">

@@ -100,13 +100,11 @@ const Portfolio: React.FC = () => {
                                 className="relative z-20 w-[80%] max-w-6xl flex flex-col md:flex-row items-end justify-between gap-12"
                                 style={{ transform: 'translateZ(0)' }}
                             >
-                                {/* Left Side: Case # */}
                                 <div className="absolute top-0 left-0 -translate-y-full mb-8 flex flex-col items-start gap-4">
                                     <span className="text-accent font-mono text-xs tracking-widest">#CASE_{project.id}</span>
                                     <div className="w-12 h-px bg-accent/50" />
                                 </div>
 
-                                {/* Center/Left: Title and Category */}
                                 <div className="max-w-2xl">
                                     <motion.div
                                         initial={{ y: 40, opacity: 0 }}
@@ -122,7 +120,6 @@ const Portfolio: React.FC = () => {
                                     </motion.div>
                                 </div>
 
-                                {/* Right Side: Technical Specs & Link */}
                                 <motion.div
                                     initial={{ x: 40, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
